@@ -1,0 +1,45 @@
+<div class="profile-container">
+  <div class="profile-header" *ngIf="perfilData">
+    <div class="profile-header-content">
+        <div class="profile-header-text">
+            <h1>Bienvenid@, {{ perfilData.nombre }}</h1>
+        </div>
+    </div>
+</div>
+
+  <br>
+  <div class="course-cards">
+    <div class="course-card" *ngFor="let module of modules">
+      <img [src]="module.imagen" [alt]="module.nombre">
+      <div class="course-details">
+        <h2>{{ module.nombre }}</h2>
+        <p>{{ module.descripcion }}</p>
+        <button [routerLink]="['/perfil', module._id, 'submodules']">Ir al curso</button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="tareas.length > 0" class="tareas-container">
+    <div class="tareas-heading-card">
+      <h2 class="tareas-heading">TUS TAREAS</h2>
+    </div>
+    <div class="tarea-cards">
+      <div class="tarea-card" *ngFor="let tarea of tareas">
+        <div class="tarea-details">
+          <h3 class="tarea-title">{{ tarea.title }}</h3>
+          <p class="tarea-description">{{ tarea.details }}</p>
+          <p class="tarea-date">Fecha de Vencimiento: {{ tarea.dueDate | date }}</p>
+          <p class="tarea-priority">Prioridad: {{ tarea.priority }}</p>
+        </div>
+        <div class="tarea-actions">
+          <button (click)="editarTarea(tarea._id)" class="tarea-action editar-button">Modificar</button>
+          <button (click)="eliminarTarea(tarea._id)" class="tarea-action eliminar-button">Eliminar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

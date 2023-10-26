@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@400;600;700&family=Shadows+Into+Light&display=swap');
+
+
+.profile-container {
+  max-width: auto;
+
+  padding: 20px;
+}
+
+p{
+  font-family: century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: justify;
+}
+
+.profile-header {
+  background: #133e8f; /* Cambia el color de fondo a tu elección */
+  color: #fff; /* Cambia el color de texto a tu elección */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.profile-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-header-text {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  border-radius: 10px;
+}
+
+.profile-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+
+.course-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.course-card {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 30);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+	transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+}
+
+.course-details {
+  padding: 20px;
+}
+
+.course-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course-details p {
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s ease;
+  background-color: #1c7097;
+  color: #fff;
+}
+
+button:hover{
+  background-color: #079f04;
+}
+
+
+/* Estilos para la lista de tareas */
+.tareas-container {
+  margin: 20px;
+}
+
+.tareas-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tarea-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Estilos para cada tarjeta de tarea */
+.tarea-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  width: 390px;
+}
+
+.tarea-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 4px 6px rgba(0.4, 0.3, 0.2, 0.5);
+  background-color: #e7e7e7;
+}
+.tarea-details {
+  padding: 10px;
+}
+
+.tarea-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.tarea-description {
+  color: #666;
+}
+
+.tarea-date, .tarea-priority {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Estilos para los botones de acción */
+.tarea-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.tarea-action {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.tarea-action.editar-button {
+  background-color: #4f6edc;
+  color: #fff;
+}
+
+.tarea-action.eliminar-button {
+  background-color: #d90808;
+  color: #fff;
+}
+
+.tarea-action:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos para el contenedor del título */
+.tareas-heading-card {
+  display: flex; /* Activa el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  background-color: #007BFF; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  width: 100%; /* Ancho del componente */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para el título "Tus Tareas" */
+.tareas-heading {
+  font-size: 35px; /* Tamaño de fuente más grande */
+  margin: 0; /* Elimina el margen predeterminado */
+}
+

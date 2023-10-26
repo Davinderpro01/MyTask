@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@400;600;700&family=Shadows+Into+Light&display=swap');
+
+
+.card {
+ /* Ancho de la tarjeta */
+  margin: 0 auto; /* Centra la tarjeta horizontalmente en el contenedor */
+  margin-top: 20px; /* Espacio superior para separar la tarjeta de otros elementos */
+  border: 1px solid #ccc; /* Borde de la tarjeta */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.card-header {
+  background-color: #007BFF; /* Color de fondo del encabezado de la tarjeta */
+  color: #fff; /* Color del texto en el encabezado */
+  padding: 10px; /* Espaciado interno del encabezado */
+}
+
+.card-body {
+  padding: 20px; /* Espaciado interno del cuerpo de la tarjeta */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espaciado entre elementos del formulario */
+}

@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>{{ tareaParaEditar ? 'Actualizar Tarea' : 'Crear Tarea' }}</h2>
+    </div>
+    <div class="card-body">
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="title">Título:</label>
+          <input type="text" id="title" name="title" [(ngModel)]="task.title" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="details">Detalles:</label>
+          <textarea id="details" name="details" [(ngModel)]="task.details" class="form-control" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="dueDate">Fecha de Vencimiento:</label>
+          <input type="date" id="dueDate" name="dueDate" [(ngModel)]="task.dueDate" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="priority">Prioridad:</label>
+          <select id="priority" name="priority" [(ngModel)]="task.priority" class="form-control" required>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()" routerLink="/perfil">
+          {{ tareaParaEditar ? 'Actualizar Tarea' : 'Crear Tarea' }}
+        </button>
+      </form>
+      <br>
+      <div *ngIf="tareaCreada" class="alert alert-success">
+        {{ tareaParaEditar ? 'Tarea actualizada exitosamente' : 'Tarea creada exitosamente' }}
+      </div>
+    </div>
+  </div>
+</div>
